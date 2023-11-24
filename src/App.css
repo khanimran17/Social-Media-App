@@ -1,38 +1,258 @@
-.App {
+/* App.css */
+
+/* Navbar styles */
+.navbar {
+  background-color: #e3e3e3;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px; /* Reduced padding */
+  height: 70px;
+  margin-bottom: 50px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: black;
+  margin-right: 12px; /* Reduced margin */
+  font-size: 0.9em; /* Smaller font size */
+  transition: color 0.3s; /* Smooth transition on color change */
+  font-weight:bold;
+}
+
+.navbar-link:hover {
+  color: #4285F4; /* Change color on hover */
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo-section img {
+  width: 150px;
+  height: 100px;
+}
+
+.user-info {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items horizontally */
+}
+
+.user-name {
+  font-size: 1.2em;
+  margin-right: 20px; /* Add some space between picture and name */
+  color: black;
+  font-weight: 600;
+}
+
+.user-img {
+  border-radius: 50%;
+  width: 40px; /* Adjusted width for the profile picture */
+  height: 40px; /* Adjusted height for the profile picture */
+  margin-right: 10px; /* Add some space between picture and name */
+}
+
+.logout-button {
+  padding: 8px 16px;
+  font-size: 0.9em;
+  background-color: #f44336; /* Red color for logout button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px; /* Add some space between picture and button */
+}
+
+.logout-button:hover {
+  background-color: #d32f2f; /* Darker shade on hover */
+}
+
+/* Styles for the login form */
+
+input,
+textarea {
+  font-family: "Nunito", sans-serif;
+}
+
+.create-post-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-post {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  margin-top: 150px;
+  padding: 60px 80px;
+  width: 500px;
+  border-radius: 7px;
+  backdrop-filter: blur(Spx);
+  background-color: #EFF3F4;
+  overflow: hidden;
+}
+
+input,
+textarea {
+  padding: 8px 10px;
+  margin: 3px 8px 16px 8px;
+  background-color: white;
+  border: 0px transparent;
+  border-radius: 5px;
+  color: black;
+  font-size: 16px;
+  z-index: 1;
+  width: 90%;
+}
+
+input[type="submit"] {
+  padding: 12px 20px; /* Adjusted padding for the submit button */
+  font-size: 1.1em; /* Font size adjustment for the button */
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3367d6;
+  cursor: pointer;
+}
+
+.form-image img {
+  width: 120px;
+  height: 76px;
+  padding: 0px 185px;
+}
+
+.form-image h3 {
+  font-size: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Login page styles */
+.login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 150px;
+}
+
+.login-text {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.login-button {
+  padding: 8px 16px; /* Reduced padding */
+  font-size: 1em;
+  background-color: #4285f4;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.login-container button img {
+  width: 20px;
+  padding-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Additional styles for spacing and layout */
+
+/* Add spacing between navbar and posts */
+.main-container {
+  padding-top: 20px;
+}
+
+/* Adjust post container size and align text */
+.post {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+/* Align text in the center */
+.post div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.description p {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #555;
+  padding: 0px 100px;
+}
+
+.username {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+/* Position likes on top right corner */
+.like-section {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.like-section .response {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  padding-top: 46px;
+}
+
+.like-section button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  margin-right: 8px;
+  cursor: pointer;
+  color: red;
+}
+
+.like-section p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Message for logged-out users */
+.logged-out-message {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #888;
 }
